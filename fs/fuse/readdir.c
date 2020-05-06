@@ -260,7 +260,7 @@ retry:
 static void fuse_force_forget(struct file *file, u64 nodeid)
 {
 	struct inode *inode = file_inode(file);
-	struct fuse_conn *fc = get_fuse_conn(inode);
+	struct fuse_mount *fm = get_fuse_mount(inode);
 	struct fuse_forget_in inarg;
 	FUSE_ARGS(args);
 
@@ -274,7 +274,7 @@ static void fuse_force_forget(struct file *file, u64 nodeid)
 	args.force = true;
 	args.noreply = true;
 
-	fuse_simple_request(fc, &args);
+	fuse_simple_request(fm, &args);
 	/* ignore errors */
 }
 
@@ -347,7 +347,7 @@ static int fuse_readdir_uncached(struct file *file, struct dir_context *ctx)
 	plus = fuse_use_readdirplus(inode, ctx);
 	ap->args.out_args[0].value = buf;
 	if (plus) {
-		attr_version = fuse_get_attr_version(fc);
+		attr_version = fuse_get_attr_version(fm->fc);
 		fuse_read_args_fill(&ia, file, ctx->pos, bufsize,
 				    FUSE_READDIRPLUS);
 	} else {
@@ -355,7 +355,7 @@ static int fuse_readdir_uncached(struct file *file, struct dir_context *ctx)
 				    FUSE_READDIR);
 	}
 	locked = fuse_lock_inode(inode);
-	res = fuse_simple_request(fc, &ap->args);
+	res = fuse_simple_request(fm, &ap->args);
 	fuse_unlock_inode(inode, locked);
 	if (res >= 0) {
 		if (!res) {
@@ -441,7 +441,7 @@ static int fuse_readdir_cached(struct file *file, struct dir_context *ctx)
 {
 	struct fuse_file *ff = file->private_data;
 	struct inode *inode = file_inode(file);
-	struct fuse_conn *fc = get_fuse_conn(inode);
+	struct fuse_mount *fm = get_fuse_mount(inode);
 	struct fuse_inode *fi = get_fuse_inode(inode);
 	enum fuse_parse_result res;
 	pgoff_t index;
