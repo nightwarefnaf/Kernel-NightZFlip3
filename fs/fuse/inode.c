@@ -494,7 +494,7 @@ static int fuse_parse_param(struct fs_context *fc, struct fs_parameter *param)
 		if (fc->oldapi)
 			return 0;
 
-		return invalfc(fc, "No changes allowed in reconfigure");
+		return invalf(fc, "No changes allowed in reconfigure");
 	}
 
 	opt = fs_parse(fc, fuse_fs_parameters, param, &result);
