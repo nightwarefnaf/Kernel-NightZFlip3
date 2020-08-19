@@ -1199,6 +1199,7 @@ static inline void fuse_freezer_count(void) {}
 
 int fuse_dax_conn_alloc(struct fuse_conn *fc, struct dax_device *dax_dev);
 void fuse_dax_conn_free(struct fuse_conn *fc);
+bool fuse_dax_check_alignment(struct fuse_conn *fc, unsigned int map_alignment);
 
 /* passthrough.c */
 int fuse_passthrough_open(struct fuse_dev *fud, u32 lower_fd);
