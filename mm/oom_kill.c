@@ -730,7 +730,6 @@ static inline void wake_oom_reaper(struct task_struct *tsk)
 
 static void __mark_oom_victim(struct task_struct *tsk)
 {
-	const struct cred *cred;
 	struct mm_struct *mm = tsk->mm;
 
 	if (!cmpxchg(&tsk->signal->oom_mm, NULL, mm)) {
@@ -751,6 +750,8 @@ static void __mark_oom_victim(struct task_struct *tsk)
  */
 static void mark_oom_victim(struct task_struct *tsk)
 {
+	const struct cred *cred;
+
 	WARN_ON(oom_killer_disabled);
 	/* OOM killer might race with memcg OOM */
 	if (test_and_set_tsk_thread_flag(tsk, TIF_MEMDIE))
