@@ -40,7 +40,7 @@ endif
 #$(warning [NGKSM] TARGET_BUILD_VARIANT $(TARGET_BUILD_VARIANT))
 
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
-    $(warning [NGKSM] NGK_DEBUG)
+#    $(warning [NGKSM] NGK_DEBUG)
     ccflags-y += -DNGK_DEBUG
 endif
 
