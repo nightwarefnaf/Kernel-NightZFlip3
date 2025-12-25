@@ -2114,6 +2114,7 @@ static int __init init_sel_fs(void)
 	struct qstr null_name = QSTR_INIT(NULL_FILE_NAME,
 					  sizeof(NULL_FILE_NAME)-1);
 	int err;
+
 	if (!selinux_enabled)
 		return 0;
 

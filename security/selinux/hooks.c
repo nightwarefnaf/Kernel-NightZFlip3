@@ -7328,6 +7328,7 @@ static struct pernet_operations selinux_net_ops = {
 static int __init selinux_nf_ip_init(void)
 {
 	int err;
+
 	if (!selinux_enabled)
 		return 0;
 
