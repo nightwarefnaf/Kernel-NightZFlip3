@@ -677,7 +677,7 @@ static int fuse_parse_param(struct fs_context *fsc, struct fs_parameter *param)
 		return invalf(fsc, "No changes allowed in reconfigure");
 	}
 
-	opt = fs_parse(fsc, &fuse_fs_parameters, param, &result);
+	opt = fs_parse(fsc, fuse_fs_parameters, param, &result);
 	if (opt < 0)
 		return opt;
 
