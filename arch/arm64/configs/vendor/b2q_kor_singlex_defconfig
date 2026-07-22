@@ -485,14 +485,6 @@ CONFIG_BUILD_ARM64_DT_OVERLAY=y
 CONFIG_TLB_CONF_HANDLER=y
 
 #
-# Hypervisor
-#
-# CONFIG_FASTUH is not set
-# CONFIG_FASTUH_RKP is not set
-# CONFIG_FASTUH_KDP is not set
-# end of Hypervisor
-
-#
 # Power management options
 #
 CONFIG_SUSPEND=y
@@ -1366,7 +1358,6 @@ CONFIG_QRTR_MHI=y
 CONFIG_QRTR_HAVEN=y
 # CONFIG_QRTR_WS_DEBUG is not set
 # CONFIG_NET_NCSI is not set
-# CONFIG_KNOX_NCM is not set
 CONFIG_RPS=y
 CONFIG_RFS_ACCEL=y
 CONFIG_XPS=y
@@ -6199,7 +6190,6 @@ CONFIG_SENSORS_SX9364=y
 # CONFIG_SENSORS_ISG5320A is not set
 # CONFIG_SENSORS_ISG5320A_SUB is not set
 # CONFIG_SENSORS_ISG5320A_R9Q is not set
-# CONFIG_NGKSM is not set
 CONFIG_NGKPAD=y
 CONFIG_ADSP_FACTORY=y
 CONFIG_LSM6DSO_FACTORY=y
@@ -6364,13 +6354,6 @@ CONFIG_SEC_INPUT_BOOSTER_QC=y
 # CONFIG_SEC_INPUT_BOOSTER_MTK is not set
 # CONFIG_SEC_INPUT_BOOSTER_HANDLER is not set
 # CONFIG_TZIC is not set
-
-#
-# samsung Performace manager
-#
-# CONFIG_KPERFMON is not set
-# CONFIG_KPERFMON_BUILD is not set
-# end of samsung Performace manager
 
 CONFIG_SEC_PERF_MANAGER=y
 CONFIG_SEC_PERF_MANAGER_QC=y
@@ -6868,29 +6851,7 @@ CONFIG_INIT_ON_ALLOC_DEFAULT_ON=y
 # end of Memory initialization
 # end of Kernel hardening options
 
-# CONFIG_SECURITY_DEFEX is not set
-# CONFIG_DEFEX_KERNEL_ONLY is not set
-# CONFIG_SECURITY_DEFEX_USER is not set
-# CONFIG_SECURITY_DEFEX_SINGLE_FILE is not set
-# CONFIG_PROCA is not set
-# CONFIG_PROCA_GKI_10 is not set
-# CONFIG_PROCA_S_OS is not set
-# CONFIG_PROCA_CERTIFICATES_XATTR is not set
-# CONFIG_PROCA_CERTIFICATES_DB is not set
-CONFIG_GAF=y
-# CONFIG_GAF_V3 is not set
-# CONFIG_GAF_V4 is not set
-# CONFIG_GAF_V5 is not set
-CONFIG_GAF_V6=y
 CONFIG_SECURITY_DSMS=y
-# CONFIG_FIVE is not set
-# CONFIG_FIVE_GKI_10 is not set
-# CONFIG_FIVE_GKI_20 is not set
-# CONFIG_FIVE_DEBUG is not set
-# CONFIG_FIVE_DEFAULT_HASH_SHA1 is not set
-# CONFIG_FIVE_DEFAULT_HASH_SHA256 is not set
-# CONFIG_FIVE_DEFAULT_HASH_SHA512 is not set
-# CONFIG_FIVE_TRUSTED_KEYRING is not set
 # end of Security options
 
 CONFIG_CRYPTO=y
