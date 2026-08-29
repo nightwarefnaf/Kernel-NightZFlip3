@@ -365,8 +365,8 @@
 					booster_key@3 {
 						input_booster,label = "touch";
 						input_booster,type = <0x2>;
-						input_booster,head_time = <0xc8>;
-						input_booster,tail_time = <0x12c>;
+						input_booster,head_time = <0x78>;
+						input_booster,tail_time = <0xb4>;
 
 						inputbooster,resource {
 							compatible = "resource";
@@ -396,8 +396,8 @@
 					booster_key@4 {
 						input_booster,label = "multitouch";
 						input_booster,type = <0x3>;
-						input_booster,head_time = <0xc8>;
-						input_booster,tail_time = <0x320>;
+						input_booster,head_time = <0x78>;
+						input_booster,tail_time = <0x190>;
 
 						inputbooster,resource {
 							compatible = "resource";
@@ -653,8 +653,8 @@
 					booster_key@3 {
 						input_booster,label = "touch";
 						input_booster,type = <0x2>;
-						input_booster,head_time = <0xc8>;
-						input_booster,tail_time = <0x12c>;
+						input_booster,head_time = <0x78>;
+						input_booster,tail_time = <0xb4>;
 
 						inputbooster,resource {
 							compatible = "resource";
@@ -684,8 +684,8 @@
 					booster_key@4 {
 						input_booster,label = "multitouch";
 						input_booster,type = <0x3>;
-						input_booster,head_time = <0xc8>;
-						input_booster,tail_time = <0x320>;
+						input_booster,head_time = <0x78>;
+						input_booster,tail_time = <0x190>;
 
 						inputbooster,resource {
 							compatible = "resource";
